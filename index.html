@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ 
   <title>Connect It</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
     }
-    
-    /* Add a gray background color and some padding to the footer */
+
     footer {
       background-color: #f2f2f2;
       padding: 25px;
     }
+
+
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    }
+
+    .homepagebutton {
+        background-color: white;
+        color: black;
+        border: 2px solid #555555;
+    }
+
+    .homepagebutton:hover {
+        background-color: #555555;
+        color: white;
+    }
   </style>
+
 </head>
 <body>
 
@@ -40,7 +69,7 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+        <li><a href="#">Login</a></li>
       </ul>
     </div>
   </div>
@@ -71,26 +100,12 @@
       <img src="image/columbia.jpg" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>
-</div><br>
+</div><br><br>
 
 <div class="container-fluid bg-3 text-center">    
   <div class="row">
-    <div class="col-sm-3">
-      <p>MIT</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3"> 
-      <p>UPenn</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3"> 
-      <p>Purdue University</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>UIUC</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
+    <button class="button homepagebutton">Organization</button>
+    <button class="button homepagebutton">University</button>
   </div>
 </div><br><br>
 
