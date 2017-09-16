@@ -6,12 +6,13 @@ import tornado.web
  
 class MainHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render('public/index.html')
+        self.render('./index.html')
 
 def main():
     application = tornado.web.Application([
         (r"/", MainHandler),
-        (r'/public/(.*)', tornado.web.StaticFileHandler, {'path': 'public/'}),
+        (r'/(.*)', tornado.web.StaticFileHandler, {'path': './'}),
+        (r"/image/cornell.png", tornado.web.StaticFileHandler, {'path':'./image/'}),
     ])
     http_server = tornado.httpserver.HTTPServer(application)
     port = int(os.environ.get("PORT", 8000))
