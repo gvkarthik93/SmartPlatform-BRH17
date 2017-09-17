@@ -229,7 +229,7 @@
     <br>
   <div class="row">
     <button class="button homepagebutton" id="myBtn">Organization</button>
-    <button class="button homepagebutton">University</button>
+    <button class="button homepagebutton" id="UniBtn">University</button>
   </div>
 </div>
 </div>
@@ -278,7 +278,7 @@
                  <div class = "btn-group-vertical">
                  <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Cornell University</button>
                  <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Harvard University</button>
-                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Stanford Universitybutton>
+                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Stanford University</button>
                  <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Columbia University</button>
                  <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Massachusets Institute of Techcnology</button>
                  <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Carnegie Mellon</button>
@@ -339,12 +339,18 @@ for(let input of inputs) {
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
+var modal = document.getElementById('UniModal');
+
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+var ubtn = document.getElementById("UniBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
+    modal.style.display = "block";
+}
+ubtn.onclick = function() {
     modal.style.display = "block";
 }
 // When the user clicks on <span> (x), close the modal
