@@ -76,9 +76,7 @@
     text-decoration: none;
     cursor: pointer;
 }
-
 /* Scroll*/
-
 .items {
   height: 500px;
   padding: 50px;
@@ -94,13 +92,11 @@
   font-size: 0;
   perspective: 500px;
 }
-
 .items.active {
   background: rgba(255,255,255,0.3);
   cursor: grabbing;
   cursor: -webkit-grabbing;
 }
-
 .item {
   width: 250px;
   height: calc(100% - 40px);
@@ -117,43 +113,33 @@
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-
 .item:nth-child(9n+1) {
   background: white;
 }
-
 .item:nth-child(9n+2) {
   background: white;
 }
-
 .item:nth-child(9n+3) {
   background: white;
 }
-
 .item:nth-child(9n+4) {
   background: white;
 }
-
 .item:nth-child(9n+5) {
   background: white;
 }
-
 .item:nth-child(9n+6) {
   background: white;
 }
-
 .item:nth-child(9n+7) {
   background: white;
 }
-
 .item:nth-child(9n+8) {
   background: white;
 }
-
 .item:nth-child(9n+9) {
   background: white;
 }
-
 /*File Upload*/
 /* Hide input*/
 .inputfile {
@@ -164,7 +150,6 @@
   position: absolute;
   z-index: -1;
 }
-
 .inputfile + label {
     cursor: pointer;
     font-size: 1.25em;
@@ -173,16 +158,13 @@
     background-color: black;
     display: inline-block;
 }
-
 .inputfile:focus + label {
   outline: 1px dotted #000;
   outline: -webkit-focus-ring-color auto 5px;
 }
-
 .inputfile + label * {
   pointer-events: none;
 }
-
 .inputfile + label {
   padding: 10px 20px;
   margin: 50px 0 0 0;
@@ -190,7 +172,6 @@
   background-color: #9E9E9E;
   border-radius: 2px;
 }
-
 .inputfile:focus + label,
 .inputfile + label:hover {
     background-color: #757575;
@@ -229,7 +210,7 @@
     <br>
   <div class="row">
     <button class="button homepagebutton" id="myBtn">Organization</button>
-    <button class="button homepagebutton">University</button>
+    <button class="button homepagebutton" id="UniBtn">University</button>
   </div>
 </div>
 </div>
@@ -267,9 +248,33 @@
   </div>
 </div>
 
+ 
+ <div id="UniModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+        <div class="container-fluid">
+          <div class="row content">
+            <div class="col-sm-3 sidenav">
+                 <div class = "btn-group-vertical">
+                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Cornell University</button>
+                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Harvard University</button>
+                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Stanford University</button>
+                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Columbia University</button>
+                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Massachusets Institute of Techcnology</button>
+                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Carnegie Mellon</button>
+                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">University of Washington</button>
+                 <button type = "button" class = "btn btn-default" data-toggle="collapse" data-target="#demo">Princeton University</button>
+                 <button type = "button" class = "btn btn-default"data-toggle="collapse" data-target="#demo">University of Pennslyvania</button>
+                </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</div>
+
 <script type="text/javascript">
 const inputs = document.querySelectorAll('.inputfile');
-
 for(let input of inputs) {
   const label = input.nextElementSibling;
   const labelVal = label.innerHTML;
@@ -289,8 +294,6 @@ for(let input of inputs) {
     }
   })
 }
-
-
 </script>
 
 <div class="items">
@@ -314,12 +317,17 @@ for(let input of inputs) {
 <script>
 // Get the modal
 var modal = document.getElementById('myModal');
+var modal = document.getElementById('UniModal');
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+var ubtn = document.getElementById("UniBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
+    modal.style.display = "block";
+}
+ubtn.onclick = function() {
     modal.style.display = "block";
 }
 // When the user clicks on <span> (x), close the modal
